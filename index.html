@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра Flood It</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        #game-board {
+            display: grid;
+            grid-template-columns: repeat(12, 50px);
+            grid-template-rows: repeat(12, 50px);
+            gap: 2px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+
+        .cell {
+            width: 50px;
+            height: 50px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: gray;
+        }
+
+        .color-button {
+            width: 50px;
+            height: 50px;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        #attempts {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Игра "Flood It"</h1>
+    <div id="attempts">Осталось ходов: 19</div>
+    <div id="game-board"></div>
+    <div>
+        <button class="color-button" style="background-color: red;" onclick="chooseColor(0)"></button>
+        <button class="color-button" style="background-color: blue;" onclick="chooseColor(1)"></button>
+        <button class="color-button" style="background-color: green;" onclick="chooseColor(2)"></button>
+        <button class="color-button" style="background-color: yellow;" onclick="chooseColor(3)"></button>
+        <button class="color-button" style="background-color: black;" onclick="chooseColor(4)"></button>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
